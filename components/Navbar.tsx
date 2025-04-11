@@ -9,11 +9,11 @@ export default function Navbar() {
     ];
     
     return(
-        <nav className={`space-mono-font sticky top-0 h-16 sm:h-20 flex items-center justify-center`}>
+        <nav className={`h-16 sm:h-20 flex items-center justify-center bg-transparent`}>
             <div className="flex items-center w-screen mx-2">
-                <div className="flex items-center justify-center w-full space-x-12 sm:space-x-20">
+                <div className="flex items-center justify-center w-full space-x-12 sm:space-x-20 font-mono">
                     {navLinks.map(({ href, label }) => (
-                        <a key={href} href={href} className="hover:text-blue-400">
+                        <a key={href} href={href} className="text-white hover:text-blue-400 transition-colors pointer-events-auto">
                             {label}
                         </a>
                     ))}
