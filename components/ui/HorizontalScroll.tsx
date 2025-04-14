@@ -15,6 +15,7 @@ import React from "react";
 import { motion } from "motion/react";
 
 export default function HorizontalScroll(){
+
     const items = ["React", "Tailwind", "Animation", "JavaScript", "CSS", "UI/UX"];
     const tools = [
         {name: "React", src: "/logo/react.svg"},
@@ -45,48 +46,31 @@ export default function HorizontalScroll(){
             <div className="flex">
                 <motion.div
                     className="flex gap-14 flex-none pr-14"
-                    animate={{ translateX: "-50%" }}
+                    animate={{ translateX: "-50%"}}
                     transition={{
                         duration: 30,
                         repeat: Infinity,
                         ease: "linear",
                         repeatType: "loop",
-                    }}
-                    onHoverEnd={(event) => console.log(event)}>
+                    }}>
                         <div className="flex"
-                            // style={{
-                            //     animation: "infinite-scroll 40s linear infinite",
-                            // }}
                             >
                             {tools.map((item, index) => (
-                                <div key={`first-${index}`} className="mx-6 rounded-lg whitespace-nowrap whitespace-nowrap flex items-center justify-center min-w-[64px]">
+                                <div key={`first-${index}`} className="mx-6 rounded-lg whitespace-nowrap whitespace-nowrap flex items-center justify-center min-w-[64px] pointer-events-auto">
                                     <img src={item.src} alt={item.name} className="h-16 w-16"/>
                                 </div>
                             ))}
                         </div>
                         <div className="flex"
-                            // style={{
-                            //     animation: "infinite-scroll 40s linear infinite",
-                            // }}
                             aria-hidden="true">
                             {tools.map((item, index) => (
-                                <div key={`second-${index}`} className="mx-6 rounded-lg whitespace-nowrap whitespace-nowrap flex items-center justify-center min-w-[64px]">
+                                <div key={`second-${index}`} className="mx-6 rounded-lg whitespace-nowrap whitespace-nowrap flex items-center justify-center min-w-[64px] pointer-events-auto">
                                     <img src={item.src} alt={item.name} className="h-16 w-16"/>
                                 </div>
                         ))}
                         </div>
                 </motion.div>
             </div>
-            
-            {/* <style jsx>{`
-                @keyframes infinite-scroll {
-                    from {
-                        transform: translateX(0);
-                    }to {
-                        transform: translateX(-100%);
-                    }
-                }
-            `}</style> */}
         </div>
     );
 };
