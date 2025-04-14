@@ -32,3 +32,7 @@ body {
 .space-mono-font {
   font-family: 'Space Mono', monospace;
 }
+
+.font-pixelify {
+  font-family: var(--font-pixelify-sans);
+}
