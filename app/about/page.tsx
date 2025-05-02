@@ -3,8 +3,12 @@
 import Footer from "@/components/Footer";
 import GradientText from "@/components/GradientText/GradientText";
 import HorizontalScroll from "@/components/ui/HorizontalScroll";
+import AboutMessage from "@/components/ui/AboutMessage";
 
 export default function About(){
+    const message1 = "Hi, I'm Delwin, a dedicated and detail-oriented web developer with a passion for creating modern, responsive, and user-friendly web applications.";
+    const message2 = "I'm pursuing Computer Science and Engineering at Government Engineering College Wayanad, while expanding my expertise in full-stack development and exploring advanced concepts in frontend architecture and user experience.";
+
     return(
         <div className="inset-0 flex mt-16 sm:mt-20 z-10 text-white pointer-events-none p-2 h-full flex-col">
             <div
@@ -32,8 +36,10 @@ export default function About(){
                     showBorder={false}>
                     <h1 className="text-3xl font-bold text-center p-1 font-pixelify">ABOUT ME</h1>
                 </GradientText>
-                <div className="space-y-5">
-                    <p className="text-lg leading-relaxed text-gray-400">
+                <div className="space-y-5 md:flex gap-3">
+                    <AboutMessage messageContent={message1}/>
+                    <AboutMessage messageContent={message2}/>
+                    {/* <p className="text-lg leading-relaxed text-gray-400">
                         Hi, I'm Delwin, a dedicated and detail-oriented web developer with a passion for creating modern, responsive, and user-friendly web applications.
                     </p>
 
@@ -41,11 +47,12 @@ export default function About(){
                         <p className="text-lg leading-relaxed text-gray-400">
                             I'm pursuing Computer Science and Engineering at Government Engineering College Wayanad, while expanding my expertise in full-stack development and exploring advanced concepts in frontend architecture and user experience.
                         </p>
-                    </div>
+                    </div> */}
                 </div>
-                <div>
+                {/* <div>
                     <HorizontalScroll/>
-                </div>
+                </div> */}
+                {/* <AboutMessage/> */}
             </div>
             <Footer/>
         </div>
