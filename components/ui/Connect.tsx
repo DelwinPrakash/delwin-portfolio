@@ -1,5 +1,34 @@
+import ScrollVelocity from "../ScrollVelocity/ScrollVelocity";
+
 export default function Connect(){
     return(
-        <div>hi</div>
+        <div className="bg-neutral-80 border-1 rounded-2xl border-red-600 font-pixelify text-xl flex flex-col justify-end mb-4">
+            <ScrollVelocity
+                texts={["<Let's Connect/>", "<Let's Connect/>"]} 
+                velocity={100} 
+                className="custom-scroll-text text-red-500 py-2 text-7xl"
+            />
+            <div className="flex justify-center gap-6 py-4 pointer-events-auto">
+                {/* Gmail */}
+                <a href="mailto:dpthedeveloper77@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <img src="logo/gmail-48.png" alt="Gmail" className="w-10 h-10 hover:scale-110 transition-transform" />
+                </a>
+
+                {/* X (Twitter) */}
+                <a href="https://x.com/PrakashDelwin" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.icons8.com/color/48/twitterx--v1.png" alt="X" className="w-10 h-10 hover:scale-110 transition-transform" />
+                </a>
+
+                {/* GitHub */}
+                <a href="https://github.com/DelwinPrakash" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.icons8.com/fluency/48/github.png" alt="GitHub" className="w-10 h-10 hover:scale-110 transition-transform" />
+                </a>
+
+                {/* LinkedIn */}
+                <a href="https://www.linkedin.com/in/DelwinPrakash" target="_blank" rel="noopener noreferrer">
+                    <img src="logo/linkedin-48.png" alt="LinkedIn" className="w-10 h-10 hover:scale-110 transition-transform" />
+                </a>
+            </div>
+        </div>
     );
 }
