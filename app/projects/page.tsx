@@ -8,7 +8,6 @@ export default function About(){
         <div className="inset-0 flex mt-16 sm:mt-20 z-10 text-white pointer-events-none p-2 h-full flex-col">
             <div
                 className="fixed min-h-full -z-10 overflow-hidden inset-0 bg-[linear-gradient(to_right,rgba(255,0,0,0.2)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,0,0,0.2)_1px,transparent_1px)] bg-[size:40px_40px] md:bg-[size:40px_40px]"
-                // className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,0,255,0.4)_0.5px,_transparent_1px)] bg-[size:24px_24px] md:bg-[radial-gradient(circle_at_center,_rgba(255,0,0,0.4)_1px,_transparent_2px)] md:bg-[size:24px_24px]"
                 style={{
                     animation: "gridMove 20s linear infinite",
                     backgroundPosition: "0 0",

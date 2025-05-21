@@ -1,5 +1,3 @@
-// import ScrollVelocity from "./ScrollVelocity/ScrollVelocity";
-
 export default function Footer(){
     const navLinks = [
         { href: "/", label: "Home" },
@@ -8,11 +6,6 @@ export default function Footer(){
     ];
     return(
         <footer className="bg-neutral-80 border-1 rounded-2xl border-red-600 font-pixelify text-xl flex flex-col justify-end py-2">
-            {/* <ScrollVelocity
-                texts={["<Let's Connect/>", "<Let's Connect/>"]} 
-                velocity={100} 
-                className="custom-scroll-text text-red-500 py-2"
-            /> */}
             <div className="bg-red-5 flex justify-between px-5 sm:px-10 pointer-events-auto">
                 <ul className="space-y-5 flex flex-col">
                     {navLinks.map(({ href, label }) => (
