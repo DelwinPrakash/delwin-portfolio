@@ -2,12 +2,15 @@
 
 import Footer from "@/components/Footer";
 import GradientText from "@/components/GradientText/GradientText";
-import HorizontalScroll from "@/components/ui/HorizontalScroll";
+// import HorizontalScroll from "@/components/ui/HorizontalScroll";
 import AboutMessage from "@/components/ui/AboutMessage";
+import Connect from "@/components/ui/Connect";
 
 export default function About(){
-    const message1 = "Hi, I'm Delwin, a dedicated and detail-oriented web developer with a passion for creating modern, responsive, and user-friendly web applications.";
-    const message2 = "I'm pursuing Computer Science and Engineering at Government Engineering College Wayanad, while expanding my expertise in full-stack development and exploring advanced concepts in frontend architecture and user experience.";
+    // const message1 = "Hi, I'm Delwin, a dedicated and detail-oriented web developer with a passion for creating modern, responsive, and user-friendly web applications.";
+    // const message2 = "I'm pursuing Computer Science and Engineering at Government Engineering College Wayanad, while expanding my expertise in full-stack development and exploring advanced concepts in frontend architecture and user experience.";
+    const message1 = "Hi, I'm Delwin Prakash — a 21-year-old Computer Science undergraduate passionate about creating impactful digital experiences. I specialize in web and mobile app development, blending functionality with clean design to build intuitive and responsive applications. My journey in tech has been driven by curiosity and a constant desire to learn, pushing me to explore new tools, frameworks, and technologies that solve real-world problems.";
+    const message2 = "Beyond development, I'm deeply interested in the future of the internet — particularly Web3 and blockchain. As the co-founder of Web3Enclave, a student-led club focused on decentralized technology, I’ve helped organize events, lead discussions, and build a community around innovation and learning. I'm always open to collaborating on exciting projects, sharing knowledge, and growing alongside like-minded builders.";
 
     return(
         <div className="inset-0 flex mt-16 sm:mt-20 z-10 text-white pointer-events-none p-2 h-full flex-col">
@@ -54,6 +57,7 @@ export default function About(){
                 </div> */}
                 {/* <AboutMessage/> */}
             </div>
+            <Connect/>
             <Footer/>
         </div>
     );
