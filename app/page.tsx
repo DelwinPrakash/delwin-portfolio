@@ -25,7 +25,7 @@ export default function Home() {
                     animationSpeed={15}
                     showBorder={false}
                     className="custom-class">
-                    <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-center p-2">Hey, I'm Delwin Prakash</h1>
+                    <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-center p-2">Hey, I&apos;m Delwin Prakash</h1>
                 </GradientText>
                 <GradientText 
                     colors={["#4079ff", "#40ffaa", "#4079ff", "#40ffaa", "#4079ff"]}

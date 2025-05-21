@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 type Card = {
     imageUrl: string;
@@ -12,11 +13,21 @@ type Card = {
 const Card: React.FC<Card> = ({ imageUrl, title, stack, githubUrl, liveUrl, isLive }) => {
     return (
         <div className="flex flex-col bg-zinc-950 shadow-md rounded-lg overflow-hidden max-w-s w-full border border-gray-700 h-full">
-            <img
+            {/* <img
                 src={imageUrl}
                 alt={`${title} preview`}
                 className="w-full h-48 object-cover"
-            />
+            /> */}
+            <div className="relative w-full h-48">
+                <Image
+                    src={imageUrl}
+                    alt={`${title} preview`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority
+                />
+            </div>
             <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2 text-gray-300">{title}</h3>
                 <div className="flex flex-wrap gap-2">

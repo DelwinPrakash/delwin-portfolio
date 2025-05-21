@@ -26,7 +26,7 @@ export default function About(){
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full place-items-center mb-4">
                 <Card
-                    imageUrl="thumbnail/portfolio.png"
+                    imageUrl="/thumbnail/portfolio.png"
                     title="Portfolio Website"
                     stack={['NextJS', 'Typescript', 'Tailwind']}
                     githubUrl="https://github.com/delwinprakash/portfolio"
@@ -34,7 +34,7 @@ export default function About(){
                     isLive={true}
                     />
                 <Card
-                    imageUrl="thumbnail/ecleanse.png"
+                    imageUrl="/thumbnail/ecleanse.png"
                     title="E-Cleanse"
                     stack={['React', 'NodeJS', 'ExpressJS', 'MongoDB', 'Tailwind']}
                     githubUrl="https://github.com/DelwinPrakash/E-Cleanse"
@@ -42,7 +42,7 @@ export default function About(){
                     isLive={false}
                     />
                 <Card
-                    imageUrl="thumbnail/nativeTodo.png"
+                    imageUrl="/thumbnail/nativeTodo.png"
                     title="Todo App"
                     stack={['React Native', 'Expo', 'Tailwind']}
                     githubUrl="https://github.com/DelwinPrakash/react-native-todo"
