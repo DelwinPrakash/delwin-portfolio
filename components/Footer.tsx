@@ -1,4 +1,4 @@
-import ScrollVelocity from "./ScrollVelocity/ScrollVelocity";
+// import ScrollVelocity from "./ScrollVelocity/ScrollVelocity";
 
 export default function Footer(){
     const navLinks = [
@@ -7,12 +7,12 @@ export default function Footer(){
         { href: "/projects", label: "Projects" },
     ];
     return(
-        <footer className="bg-neutral-80 border-1 rounded-2xl border-red-600 font-pixelify text-xl flex flex-col justify-end">
-            <ScrollVelocity
+        <footer className="bg-neutral-80 border-1 rounded-2xl border-red-600 font-pixelify text-xl flex flex-col justify-end py-2">
+            {/* <ScrollVelocity
                 texts={["<Let's Connect/>", "<Let's Connect/>"]} 
                 velocity={100} 
                 className="custom-scroll-text text-red-500 py-2"
-            />
+            /> */}
             <div className="bg-red-5 flex justify-between px-5 sm:px-10 pointer-events-auto">
                 <ul className="space-y-5 flex flex-col">
                     {navLinks.map(({ href, label }) => (
@@ -24,7 +24,7 @@ export default function Footer(){
                 <ul className="space-y-5 flex flex-col items-end">
                     <a href="https://x.com/PrakashDelwin" className="text-white hover:text-blue-400 transition-colors">X</a>
                     <a href="https://github.com/DelwinPrakash" className="text-white hover:text-blue-400 transition-colors">GitHub</a>
-                    <a href="https://x.com/DelwinPrakash" className="text-white hover:text-blue-400 transition-colors">Email</a>
+                    <a href="mailto:dpthedeveloper77@gmail.com" className="text-white hover:text-blue-400 transition-colors">Email</a>
                 </ul>
             </div>
             <div className="flex justify-center">
