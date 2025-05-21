@@ -22,6 +22,7 @@ const spaceMono = Space_Mono({
 
 const pixelify = Pixelify_Sans({
   weight: "400",
+  subsets: ["latin"],
   variable: '--font-pixelify-sans',
 
 })
@@ -38,6 +39,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/logo/d.png" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${spaceMono.variable} ${pixelify.variable} antialiased`}
       >

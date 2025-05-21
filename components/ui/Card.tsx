@@ -11,7 +11,7 @@ type Card = {
 
 const Card: React.FC<Card> = ({ imageUrl, title, stack, githubUrl, liveUrl, isLive }) => {
     return (
-        <div className="flex flex-col bg-zinc-950 shadow-md rounded-lg overflow-hidden max-w-xs w-full border border-gray-700 h-full">
+        <div className="flex flex-col bg-zinc-950 shadow-md rounded-lg overflow-hidden max-w-s w-full border border-gray-700 h-full">
             <img
                 src={imageUrl}
                 alt={`${title} preview`}
