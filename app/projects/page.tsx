@@ -30,7 +30,7 @@ export default function About(){
                     title="Portfolio Website"
                     stack={['NextJS', 'Typescript', 'Tailwind']}
                     githubUrl="https://github.com/delwinprakash/portfolio"
-                    liveUrl="https://github.com/delwinprakash/portfolio"
+                    liveUrl="https://delwin.vercel.app/"
                     isLive={true}
                     />
                 <Card
