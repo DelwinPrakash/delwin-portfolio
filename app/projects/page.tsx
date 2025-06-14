@@ -26,13 +26,21 @@ export default function About(){
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full place-items-center mb-4">
                 <Card
+                    imageUrl="/thumbnail/chatapp.png"
+                    title="ChatApp"
+                    stack={['React Native', 'Supabase']}
+                    githubUrl="https://github.com/delwinprakash/chatapp"
+                    liveUrl="https://drive.google.com/drive/folders/1SDkq3SCXQDbxpLhrU2QdRqZ3IKfrgzNK?usp=sharing"
+                    isLive={true}
+                />
+                <Card
                     imageUrl="/thumbnail/portfolio.png"
                     title="Portfolio Website"
                     stack={['NextJS', 'Typescript', 'Tailwind']}
                     githubUrl="https://github.com/delwinprakash/portfolio"
                     liveUrl="https://delwin.vercel.app/"
                     isLive={true}
-                    />
+                />
                 <Card
                     imageUrl="/thumbnail/ecleanse.png"
                     title="E-Cleanse"
@@ -40,7 +48,7 @@ export default function About(){
                     githubUrl="https://github.com/DelwinPrakash/E-Cleanse"
                     liveUrl=""
                     isLive={false}
-                    />
+                />
                 <Card
                     imageUrl="/thumbnail/nativeTodo.png"
                     title="Todo App"

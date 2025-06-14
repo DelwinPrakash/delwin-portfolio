@@ -17,7 +17,7 @@ export default function Footer(){
                 <ul className="space-y-5 flex flex-col items-end">
                     <a href="https://x.com/PrakashDelwin" className="text-white hover:text-blue-400 transition-colors">X</a>
                     <a href="https://github.com/DelwinPrakash" className="text-white hover:text-blue-400 transition-colors">GitHub</a>
-                    <a href="mailto:dpthedeveloper77@gmail.com" className="text-white hover:text-blue-400 transition-colors">Email</a>
+                    <a href="mailto:dev.delwin@gmail.com" className="text-white hover:text-blue-400 transition-colors">Email</a>
                 </ul>
             </div>
             <div className="flex justify-center">

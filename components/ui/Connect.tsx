@@ -10,7 +10,7 @@ export default function Connect(){
                 className="custom-scroll-text text-red-500 py-2 text-7xl"
             />
             <div className="flex justify-center gap-6 py-4 pointer-events-auto">
-                <a href="mailto:dpthedeveloper77@gmail.com" target="_blank" rel="noopener noreferrer">
+                <a href="mailto:dev.delwin@gmail.com" target="_blank" rel="noopener noreferrer">
                     {/* <img src="logo/gmail-48.png" alt="Gmail" className="w-10 h-10 hover:scale-110 transition-transform" /> */}
                     <Image
                         src="/logo/gmail-48.png"
