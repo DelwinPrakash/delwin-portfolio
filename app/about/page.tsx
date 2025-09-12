@@ -10,7 +10,7 @@ export default function About(){
     const message2 = "Beyond development, I'm deeply interested in the future of the internet — particularly Web3 and blockchain. As the co-founder of Web3Enclave, a student-led club focused on decentralized technology, I’ve helped organize events, lead discussions, and build a community around innovation and learning. I'm always open to collaborating on exciting projects, sharing knowledge, and growing alongside like-minded builders.";
 
     return(
-        <div className="inset-0 flex mt-16 sm:mt-20 z-10 text-white pointer-events-none p-2 h-full flex-col">
+        <div className="inset-0 flex mt-16 sm:mt-20 z-10 text-white pointer-events-none p-4 h-full flex-col">
             <div
                 className="fixed min-h-full -z-10 overflow-hidden inset-0 bg-[linear-gradient(to_right,rgba(255,0,0,0.2)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,0,0,0.2)_1px,transparent_1px)] bg-[size:40px_40px] md:bg-[size:40px_40px]"
                 style={{
