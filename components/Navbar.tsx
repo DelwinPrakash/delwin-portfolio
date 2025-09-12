@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation"; 
 
 export default function Navbar() {
@@ -17,9 +18,9 @@ export default function Navbar() {
             <div className="flex items-center w-screen">
                 <div className="flex items-center justify-evenly w-full space-x-5 text-center font-mono">
                     {navLinks.map(({ href, label }) => (
-                        <a key={href} href={href} className={`${location === href ? "text-white" : "text-gray-500"} hover:text-blue-400 transition-colors pointer-events-auto`}>
+                        <Link key={href} href={href} className={`${location === href ? "text-white" : "text-gray-500"} hover:text-blue-400 transition-colors pointer-events-auto`}>
                             {label}
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </div>

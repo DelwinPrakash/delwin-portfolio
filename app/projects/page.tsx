@@ -4,10 +4,10 @@ import Footer from "@/components/Footer";
 import Particles from "@/components/Particles/Particles";
 import Card from "@/components/ui/Card";
 
-export default function About(){
+export default function Projects(){
     return(
         <div className="relative w-full h-full overflow-hidden">
-            <div className="absolute inset-0">
+            <div className="absolute inset-0 pointer-events-none">
                 <Particles
                     particleColors={['#40ffaa', '#4079ff']}
                     particleCount={200}
@@ -21,6 +21,14 @@ export default function About(){
             </div>
             <div className="inset-0 flex flex-col items-center justify-center z-10 text-white mt-16 sm:mt-20 px-2">
                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-4 px-3">
+                    <Card
+                        imageUrl="/thumbnail/chatapp.png"
+                        title="Journal.sol"
+                        stack={['Solana', 'Anchor', 'NextJs', 'Wallet Adapter', 'Tailwind']}
+                        githubUrl="https://github.com/delwinprakash/journal.sol"
+                        liveUrl="https://journal-sol-one.vercel.app"
+                        isLive={true}
+                    />
                     <Card
                         imageUrl="/thumbnail/chatapp.png"
                         title="ChatApp"
@@ -58,6 +66,6 @@ export default function About(){
                     <Footer/>
                 </div>
             </div>
-        </div >
+        </div>
     );
 }

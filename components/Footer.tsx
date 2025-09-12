@@ -5,7 +5,7 @@ export default function Footer(){
         { href: "/projects", label: "Projects" },
     ];
     return(
-        <footer className="mb-4 border-1 rounded-2xl border-red-600 font-pixelify text-xl flex flex-col justify-end py-2">
+        <footer className="mb-4 border-1 rounded-2xl border-red-600 font-pixelify text-xl flex flex-col justify-end py-2 backdrop-blur-xs">
             <div className="flex justify-between px-5 sm:px-10 pointer-events-auto">
                 <ul className="space-y-5 flex flex-col">
                     {navLinks.map(({ href, label }) => (
