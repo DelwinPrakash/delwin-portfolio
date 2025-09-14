@@ -1,9 +1,25 @@
 "use client";
 
-import GradientText from "@/components/GradientText/GradientText";
 import Particles from "@/components/Particles/Particles";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+    const [index, setIndex] = useState(0);
+    const [fade, setFade] = useState(true);
+    const stack: string[] = ["FullStack", "App", "Blockchain"];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setFade(false);
+            setTimeout(() => {
+                setIndex((prev) => (prev + 1) % stack.length);
+                setFade(true);
+            }, 1000);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, [stack.length])
+
     return (
         <div className="relative w-full h-dvh overflow-hidden bg-transparent">
             <div className="absolute inset-0">
@@ -20,20 +36,12 @@ export default function Home() {
                 />
             </div>
             <div className="absolute inset-0 flex flex-col items-center justify-center z-10 text-white pointer-events-none">
-                <GradientText 
-                    colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-                    animationSpeed={15}
-                    showBorder={false}
-                    className="custom-class">
-                    <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-center p-2">Hey, I&apos;m Delwin Prakash</h1>
-                </GradientText>
-                <GradientText 
-                    colors={["#4079ff", "#40ffaa", "#4079ff", "#40ffaa", "#4079ff"]}
-                    animationSpeed={15}
-                    showBorder={false}
-                    className="custom-class animate-gradient">
-                    <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-center mt-2 p-1">FullStack Developer</h1>
-                </GradientText>
+
+                <h1 className="gradient-text text-3xl sm:text-5xl lg:text-6xl font-bold text-center p-2">Hey, I&apos;m Delwin Prakash</h1>
+                
+                <h1 className={`gradient-text text-3xl sm:text-5xl lg:text-6xl font-bold text-center mt-2 p-1 transition-opacity duration-500 ${fade ? "opacity-100" : "opacity-0"}`}>
+                    {`${stack[index]} Developer`}
+                </h1>
             </div>
         </div >
     );
