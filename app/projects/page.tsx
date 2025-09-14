@@ -22,7 +22,7 @@ export default function Projects(){
             <div className="inset-0 flex flex-col items-center justify-center z-10 text-white mt-16 sm:mt-20 px-2">
                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-4 px-3">
                     <Card
-                        imageUrl="/thumbnail/chatapp.png"
+                        imageUrl="/thumbnail/journal-sol.png"
                         title="Journal.sol"
                         stack={['Solana', 'Anchor', 'NextJs', 'Wallet Adapter', 'Tailwind']}
                         githubUrl="https://github.com/delwinprakash/journal.sol"
