@@ -1,4 +1,5 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from "tailwindcss";
+
 export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,7 +9,7 @@ export default {
   theme: {
     extend: {
       keyframes: {
-        gradient: {
+        'gradient-move': {
           '0%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
           '100%': { backgroundPosition: '0% 50%' },
@@ -19,7 +20,7 @@ export default {
           }
       },
       animation: {
-        gradient: 'gradient 8s ease infinite',
+        'gradient-move': 'gradient-move 8s ease infinite',
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
       },
     },
