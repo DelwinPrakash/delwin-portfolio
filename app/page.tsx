@@ -55,7 +55,7 @@ export default function Home() {
         },
     ];
 
-    const skills: String[] = [
+    const skills: string[] = [
         "Anchor",
         "AngularJS",
         "Appwrite",
