@@ -18,6 +18,15 @@ interface Project {
 export default function Projects() {
     const projects: Project[] = [
         {
+            title: "Rusty-Type",
+            description: "Terminal based typing speed test application built with Rust.",
+            imageUrl: "/thumbnail/rusty-type.png",
+            stack: ['Rust', 'cli'],
+            githubUrl: "https://github.com/delwinprakash/rusty-type.sol",
+            liveUrl: "https://crates.io/crates/rusty-type",
+            isLive: true
+        },
+        {
             title: "Journal.sol",
             description: "A decentralized journaling application on Solana.",
             imageUrl: "/thumbnail/journal-sol.png",
@@ -37,7 +46,7 @@ export default function Projects() {
         },
         {
             title: "Portfolio Website",
-            description: "My personal portfolio showcasing my work.",
+            description: "My personal portfolio showcasing my work. This portfolio",
             imageUrl: "/thumbnail/portfolio.png",
             stack: ['Next.js', 'TypeScript', 'Tailwind'],
             githubUrl: "https://github.com/delwinprakash/portfolio",
@@ -88,11 +97,11 @@ export default function Projects() {
                                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                                     {project.isLive && (
                                         <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                                            <Button size="sm" variant="secondary">Live Demo</Button>
+                                            <Button size="sm" variant="secondary" className="bg-black border-1 hover:bg-white hover:text-black">Live Demo</Button>
                                         </a>
                                     )}
                                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                                        <Button size="sm" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-black">GitHub</Button>
+                                        <Button size="sm" variant="outline" className="bg-black text-white border-white hover:bg-white hover:text-black">GitHub</Button>
                                     </a>
                                 </div>
                             </div>

@@ -4,6 +4,18 @@ import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
 import Link from "next/link";
+import { Button } from "@/components/ui/Button";
+import Image from "next/image";
+
+interface Project {
+    title: string;
+    description: string;
+    imageUrl: string;
+    stack: string[];
+    githubUrl: string;
+    liveUrl: string;
+    isLive: boolean;
+}
 
 export default function Home() {
     const [index, setIndex] = useState(0);
@@ -21,6 +33,54 @@ export default function Home() {
 
         return () => clearInterval(interval);
     }, [stack.length]);
+
+    const projects: Project[] = [
+        {
+            title: "Rusty-Type",
+            description: "Terminal based typing speed test application built with Rust.",
+            imageUrl: "/thumbnail/rusty-type.png",
+            stack: ['Rust', 'cli'],
+            githubUrl: "https://github.com/delwinprakash/rusty-type.sol",
+            liveUrl: "https://crate.io/crates/rusty-type",
+            isLive: true
+        },
+        {
+            title: "Journal.sol",
+            description: "A decentralized journaling application on Solana.",
+            imageUrl: "/thumbnail/journal-sol.png",
+            stack: ['Solana', 'Anchor', 'Next.js', 'Wallet Adapter', 'Tailwind'],
+            githubUrl: "https://github.com/delwinprakash/journal.sol",
+            liveUrl: "https://journal-sol-one.vercel.app",
+            isLive: true
+        },
+    ];
+
+    const skills: String[] = [
+        "Anchor",
+        "AngularJS",
+        "Appwrite",
+        "C",
+        "Docker",
+        "ExpressJS",
+        "Figma",
+        "Git",
+        "Java",
+        "JavaScript",
+        "MongoDB",
+        "NodeJS",
+        "Postman",
+        "Python",
+        "React Native",
+        "ReactJS",
+        "Rust",
+        "SQL",
+        "Solana",
+        "Solidity",
+        "Supabase",
+        "TailwindCSS",
+        "TypeScript",
+        "Web3.js"
+    ];
 
     return (
         <div className="relative w-full min-h-screen overflow-x-hidden text-foreground selection:bg-primary/30">
@@ -55,62 +115,48 @@ export default function Home() {
 
             <Section>
                 <div className="flex items-center justify-between mb-12">
-                    <h2 className="text-3xl font-bold">Featured Work</h2>
+                    <h2 className="text-3xl font-bold">Recent Works</h2>
                     <Link href="/projects" className="text-primary hover:underline underline-offset-4">
                         View All &rarr;
                     </Link>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <Card className="group cursor-pointer">
-                        <div className="aspect-video bg-muted rounded-lg mb-4 overflow-hidden relative">
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                <span className="text-white font-medium">View Case Study</span>
+                    {projects.map((project, index) => (
+                        <Card key={index} className="flex flex-col h-full overflow-hidden group">
+                            <div className="relative aspect-video w-full overflow-hidden rounded-lg mb-4 bg-muted">
+                                <Image
+                                    src={project.imageUrl}
+                                    alt={project.title}
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                                    {project.isLive && (
+                                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                                            <Button size="sm" variant="secondary" className="bg-black border-1 hover:bg-white hover:text-black">Live Demo</Button>
+                                        </a>
+                                    )}
+                                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                                        <Button size="sm" variant="outline" className="bg-black text-white border-white hover:bg-white hover:text-black">GitHub</Button>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Project Alpha</h3>
-                        <p className="text-muted-foreground text-sm mb-4">
-                            A decentralized exchange aggregator built on Solana using Next.js and Anchor.
-                        </p>
-                        <div className="flex flex-wrap gap-2">
-                            <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">Next.js</span>
-                            <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">Solana</span>
-                            <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">TypeScript</span>
-                        </div>
-                    </Card>
 
-                    <Card className="group cursor-pointer">
-                        <div className="aspect-video bg-muted rounded-lg mb-4 overflow-hidden relative">
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                <span className="text-white font-medium">View Case Study</span>
-                            </div>
-                        </div>
-                        <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">E-Commerce Dashboard</h3>
-                        <p className="text-muted-foreground text-sm mb-4">
-                            Comprehensive analytics dashboard for online retailers with real-time data visualization.
-                        </p>
-                        <div className="flex flex-wrap gap-2">
-                            <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">React</span>
-                            <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">Tailwind</span>
-                            <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">Recharts</span>
-                        </div>
-                    </Card>
+                            <div className="flex flex-col flex-grow">
+                                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
+                                <p className="text-muted-foreground text-sm mb-4 flex-grow">{project.description}</p>
 
-                    <Card className="group cursor-pointer">
-                        <div className="aspect-video bg-muted rounded-lg mb-4 overflow-hidden relative">
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                <span className="text-white font-medium">View Case Study</span>
+                                <div className="flex flex-wrap gap-2 mt-auto">
+                                    {project.stack.map((tech) => (
+                                        <span key={tech} className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                        <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Portfolio v1</h3>
-                        <p className="text-muted-foreground text-sm mb-4">
-                            The previous iteration of this portfolio, showcasing my early work and growth.
-                        </p>
-                        <div className="flex flex-wrap gap-2">
-                            <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">HTML/CSS</span>
-                            <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">JavaScript</span>
-                        </div>
-                    </Card>
+                        </Card>
+                    ))}
                 </div>
             </Section>
 
@@ -123,8 +169,8 @@ export default function Home() {
                 </div>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                    {["React", "Next.js", "TypeScript", "Node.js", "Tailwind CSS", "PostgreSQL", "Solana", "Rust", "Docker", "AWS", "Git", "Figma"].map((skill) => (
-                        <Card key={skill} className="flex items-center justify-center p-4 hover:border-primary/50 transition duration-300 ease-in-out">
+                    {skills.map((skill, index) => (
+                        <Card key={index} className="flex items-center justify-center p-4 hover:border-primary/50 transition duration-300 ease-in-out">
                             <span className="font-medium">{skill}</span>
                         </Card>
                     ))}
