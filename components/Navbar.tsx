@@ -1,24 +1,31 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation"; 
+import { usePathname } from "next/navigation";
+import { cn } from "@/components/ui/Button";
 
 export default function Navbar() {
-    
     const location = usePathname();
 
     const navLinks = [
         { href: "/", label: "HOME" },
-        { href: "/about", label: "ABOUT ME" },
+        { href: "/about", label: "ABOUT" },
         { href: "/projects", label: "PROJECTS" },
     ];
-    
-    return(
-        <nav className={`h-16 sm:h-20 flex items-center justify-center bg-transparent`}>
-            <div className="flex items-center w-screen">
-                <div className="flex items-center justify-evenly w-full space-x-5 text-center font-mono">
+
+    return (
+        <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center h-16 sm:h-20 px-4 sm:px-8">
+            <div className="glass rounded-full px-6 py-3 flex items-center space-x-8">
+                <div className="flex items-center space-x-6 sm:space-x-8 font-mono text-sm sm:text-base">
                     {navLinks.map(({ href, label }) => (
-                        <Link key={href} href={href} className={`${location === href ? "text-white" : "text-gray-500"} hover:text-blue-400 transition-colors pointer-events-auto`}>
+                        <Link
+                            key={href}
+                            href={href}
+                            className={cn(
+                                "transition-colors duration-300 hover:text-primary pointer-events-auto",
+                                location === href ? "text-primary font-bold" : "text-muted-foreground"
+                            )}
+                        >
                             {label}
                         </Link>
                     ))}

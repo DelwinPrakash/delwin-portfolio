@@ -1,27 +1,39 @@
-export default function Footer(){
+import Link from "next/link";
+
+export default function Footer() {
     const navLinks = [
         { href: "/", label: "Home" },
-        { href: "/about", label: "About me" },
+        { href: "/about", label: "About" },
         { href: "/projects", label: "Projects" },
     ];
-    return(
-        <footer className="mb-4 border-1 rounded-2xl border-red-600 font-pixelify text-xl flex flex-col justify-end py-2 backdrop-blur-xs">
-            <div className="flex justify-between px-5 sm:px-10 pointer-events-auto">
-                <ul className="space-y-5 flex flex-col">
-                    {navLinks.map(({ href, label }) => (
-                        <a key={href} href={href} className="text-white hover:text-blue-400 transition-colors">
-                            {label}
-                        </a>
-                    ))}
-                </ul>
-                <ul className="space-y-5 flex flex-col items-end">
-                    <a href="https://x.com/PrakashDelwin" className="text-white hover:text-blue-400 transition-colors">X</a>
-                    <a href="https://github.com/DelwinPrakash" className="text-white hover:text-blue-400 transition-colors">GitHub</a>
-                    <a href="mailto:dev.delwin@gmail.com" className="text-white hover:text-blue-400 transition-colors">Email</a>
-                </ul>
-            </div>
-            <div className="flex justify-center">
-                <p className="font-mono text-lg mt-2">&copy; 2025 - Delwin Prakash</p>
+
+    return (
+        <footer className="w-full py-8 border-t border-border bg-background/50 backdrop-blur-sm">
+            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="flex flex-col items-center md:items-start gap-4">
+                    <div className="flex gap-6">
+                        {navLinks.map(({ href, label }) => (
+                            <Link key={href} href={href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                                {label}
+                            </Link>
+                        ))}
+                    </div>
+                    <p className="text-xs text-muted-foreground font-mono">
+                        &copy; {new Date().getFullYear()} Delwin Prakash. All rights reserved.
+                    </p>
+                </div>
+
+                <div className="flex gap-6">
+                    <a href="https://x.com/PrakashDelwin" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        X (Twitter)
+                    </a>
+                    <a href="https://github.com/DelwinPrakash" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        GitHub
+                    </a>
+                    <a href="mailto:dev.delwin@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        Email
+                    </a>
+                </div>
             </div>
         </footer>
     );
