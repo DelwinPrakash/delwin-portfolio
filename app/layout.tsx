@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Space_Mono, Pixelify_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Particles from "@/components/Particles/Particles";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,12 +48,32 @@ export default function RootLayout({
         <link rel="icon" href="/logo/d.png" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${spaceMono.variable} ${pixelify.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${spaceMono.variable} ${pixelify.variable} antialiased bg-background text-foreground selection:bg-primary/30 min-h-screen flex flex-col`}
       >
-        <div className="absolute inset-x-0 top-0 z-50 pointer-events-none">
-            <Navbar />
+        <div className="fixed inset-0 z-0 pointer-events-none opacity-40">
+          <Particles
+            particleColors={['#40ffaa', '#4079ff']}
+            particleCount={150}
+            particleSpread={10}
+            speed={0.2}
+            particleBaseSize={100}
+            moveParticlesOnHover={true}
+            alphaParticles={false}
+            disableRotation={false}
+          />
         </div>
-        {children}
+
+        <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
+          <Navbar />
+        </div>
+
+        <main className="flex-grow relative z-10">
+          {children}
+        </main>
+
+        <div className="relative z-10">
+          <Footer />
+        </div>
       </body>
     </html>
   );
