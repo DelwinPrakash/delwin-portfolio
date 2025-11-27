@@ -11,7 +11,7 @@ export default function About() {
             <Section className="relative z-10">
                 <div className="max-w-4xl mx-auto space-y-12">
                     <div className="text-center space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">About Me</h1>
+                        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight gradient-move animate-gradient-move text-2xl sm:text-3xl lg:text-5xl font-bold bg-gradient-to-r from-[#40ffaa] via-[#4079ff] to-[#40ffaa] bg-[length:300%_100%] bg-clip-text text-transparent">About Me</h1>
                         <p className="text-muted-foreground text-lg">
                             A glimpse into my journey, passion, and what drives me.
                         </p>

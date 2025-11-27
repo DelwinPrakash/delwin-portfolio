@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@config '../tailwind.config.ts';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,7 +8,7 @@
   /* Light mode defaults (can be adjusted if light mode is desired later) */
   --background: #ffffff;
   --foreground: #030712;
-  
+
   /* Custom Colors */
   --primary: #3b82f6;
   --primary-foreground: #ffffff;
@@ -24,24 +25,31 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #030712; /* Deep dark blue/black */
-    --foreground: #f9fafb; /* Off-white */
-    
-    --primary: #3b82f6; /* Blue 500 */
+    --background: #030712;
+    /* Deep dark blue/black */
+    --foreground: #f9fafb;
+    /* Off-white */
+
+    --primary: #3b82f6;
+    /* Blue 500 */
     --primary-foreground: #ffffff;
-    
-    --secondary: #1f2937; /* Gray 800 */
+
+    --secondary: #1f2937;
+    /* Gray 800 */
     --secondary-foreground: #f9fafb;
-    
-    --accent: #10b981; /* Emerald 500 */
+
+    --accent: #10b981;
+    /* Emerald 500 */
     --accent-foreground: #ffffff;
-    
-    --muted: #111827; /* Gray 900 */
-    --muted-foreground: #9ca3af; /* Gray 400 */
-    
+
+    --muted: #111827;
+    /* Gray 900 */
+    --muted-foreground: #9ca3af;
+    /* Gray 400 */
+
     --card: #111827;
     --card-foreground: #f9fafb;
-    
+
     --border: #1f2937;
   }
 }
@@ -60,7 +68,7 @@
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-border: var(--border);
-  
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-space: var(--font-space-mono);
@@ -74,37 +82,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Utilities */
-.glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.glass-card {
-  background: rgba(17, 24, 39, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.gradient-text {
-  display: inline-block;
-  background: linear-gradient(to right, #40ffaa, #4079ff, #40ffaa, #4079ff, #40ffaa);
-  background-size: 300% 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: gradient-move 8s linear infinite;
-}
-
-@keyframes gradient-move {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
 
 /* Scrollbar */
 ::-webkit-scrollbar {
@@ -123,3 +100,12 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
+
+/* @keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+} */

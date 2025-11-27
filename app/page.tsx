@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
 import Link from "next/link";
@@ -17,8 +16,8 @@ export default function Home() {
             setTimeout(() => {
                 setIndex((prev) => (prev + 1) % stack.length);
                 setFade(true);
-            }, 500);
-        }, 4000);
+            }, 1000);
+        }, 5000);
 
         return () => clearInterval(interval);
     }, [stack.length]);
@@ -26,18 +25,17 @@ export default function Home() {
     return (
         <div className="relative w-full min-h-screen overflow-x-hidden text-foreground selection:bg-primary/30">
 
-            {/* Hero Section */}
-            <Section className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center">
+            <Section className="relative z-10 flex flex-col items-center justify-center min-h-dvh text-center">
                 <div className="space-y-6 animate-in fade-in zoom-in duration-1000">
                     <h2 className="text-lg sm:text-xl font-mono text-primary tracking-widest uppercase">
                         Hello, I&apos;m
                     </h2>
-                    <h1 className="text-5xl sm:text-7xl lg:text-9xl font-bold tracking-tight">
+                    <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight">
                         Delwin <span className="text-muted-foreground">Prakash</span>
                     </h1>
 
                     <div className="h-12 sm:h-16 flex items-center justify-center">
-                        <h3 className={`text-2xl sm:text-4xl lg:text-5xl font-bold gradient-text transition-opacity duration-500 ${fade ? "opacity-100" : "opacity-0"}`}>
+                        <h3 className={`gradient-move animate-gradient-move text-2xl sm:text-3xl lg:text-5xl font-bold bg-gradient-to-r from-[#40ffaa] via-[#4079ff] to-[#40ffaa] bg-[length:300%_100%] bg-clip-text text-transparent transition-opacity duration-500 ${fade ? 'opacity-90' : 'opacity-0'}`}>
                             {stack[index]} Developer
                         </h3>
                     </div>
@@ -46,17 +44,8 @@ export default function Home() {
                         Building digital experiences with modern technologies. Passionate about clean code, user-centric design, and scalable architecture.
                     </p>
 
-                    {/* <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-                        <Link href="/projects">
-                            <Button size="lg" className="w-full sm:w-auto">View Projects</Button>
-                        </Link>
-                        <Link href="/about">
-                            <Button variant="outline" size="lg" className="w-full sm:w-auto">About Me</Button>
-                        </Link>
-                    </div> */}
                 </div>
 
-                {/* Scroll Indicator */}
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-muted-foreground">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -64,7 +53,6 @@ export default function Home() {
                 </div>
             </Section>
 
-            {/* Featured Projects Preview */}
             <Section>
                 <div className="flex items-center justify-between mb-12">
                     <h2 className="text-3xl font-bold">Featured Work</h2>
@@ -74,7 +62,6 @@ export default function Home() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {/* Placeholder Projects - In a real scenario, map from data */}
                     <Card className="group cursor-pointer">
                         <div className="aspect-video bg-muted rounded-lg mb-4 overflow-hidden relative">
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
@@ -127,7 +114,6 @@ export default function Home() {
                 </div>
             </Section>
 
-            {/* Skills Section */}
             <Section>
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold mb-4">Technical Skills</h2>

@@ -69,7 +69,7 @@ export default function Projects() {
 
             <Section className="relative z-10">
                 <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                    <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">My Projects</h1>
+                    <h1 className="p-1 text-4xl sm:text-5xl font-bold tracking-tight mb-4 gradient-move animate-gradient-move text-2xl sm:text-3xl lg:text-5xl font-bold bg-gradient-to-r from-[#40ffaa] via-[#4079ff] to-[#40ffaa] bg-[length:300%_100%] bg-clip-text text-transparent">My Projects</h1>
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
                         A collection of projects I&apos;ve worked on, ranging from web applications to blockchain dApps.
                     </p>
