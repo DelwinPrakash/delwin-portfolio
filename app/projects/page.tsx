@@ -1,71 +1,118 @@
-"use client"
+"use client";
 
-import Footer from "@/components/Footer";
-import Particles from "@/components/Particles/Particles";
-import Card from "@/components/ui/Card";
+import { Section } from "@/components/ui/Section";
+import { Card } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import Image from "next/image";
 
-export default function Projects(){
-    return(
-        <div className="relative w-full h-full overflow-hidden">
-            <div className="absolute inset-0 pointer-events-none">
-                <Particles
-                    particleColors={['#40ffaa', '#4079ff']}
-                    particleCount={200}
-                    particleSpread={10}
-                    speed={0.1}
-                    particleBaseSize={100}
-                    moveParticlesOnHover={true}
-                    alphaParticles={false}
-                    disableRotation={false}
-                />
-            </div>
-            <div className="inset-0 flex flex-col items-center justify-center z-10 text-white mt-16 sm:mt-20 px-2">
-                <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-4 px-3">
-                    <Card
-                        imageUrl="/thumbnail/journal-sol.png"
-                        title="Journal.sol"
-                        stack={['Solana', 'Anchor', 'NextJs', 'Wallet Adapter', 'Tailwind']}
-                        githubUrl="https://github.com/delwinprakash/journal.sol"
-                        liveUrl="https://journal-sol-one.vercel.app"
-                        isLive={true}
-                    />
-                    <Card
-                        imageUrl="/thumbnail/chatapp.png"
-                        title="ChatApp"
-                        stack={['React Native', 'Supabase']}
-                        githubUrl="https://github.com/delwinprakash/chatapp"
-                        liveUrl="https://drive.google.com/drive/folders/1SDkq3SCXQDbxpLhrU2QdRqZ3IKfrgzNK?usp=sharing"
-                        isLive={true}
-                    />
-                    <Card
-                        imageUrl="/thumbnail/portfolio.png"
-                        title="Portfolio Website"
-                        stack={['NextJS', 'Typescript', 'Tailwind']}
-                        githubUrl="https://github.com/delwinprakash/portfolio"
-                        liveUrl="https://delwin.vercel.app/"
-                        isLive={true}
-                    />
-                    <Card
-                        imageUrl="/thumbnail/ecleanse.png"
-                        title="E-Cleanse"
-                        stack={['React', 'NodeJS', 'ExpressJS', 'MongoDB', 'Tailwind']}
-                        githubUrl="https://github.com/DelwinPrakash/E-Cleanse"
-                        liveUrl=""
-                        isLive={false}
-                    />
-                    <Card
-                        imageUrl="/thumbnail/nativeTodo.png"
-                        title="Todo App"
-                        stack={['React Native', 'Expo', 'Tailwind']}
-                        githubUrl="https://github.com/DelwinPrakash/react-native-todo"
-                        liveUrl=""
-                        isLive={false}
-                    />
+interface Project {
+    title: string;
+    description: string;
+    imageUrl: string;
+    stack: string[];
+    githubUrl: string;
+    liveUrl: string;
+    isLive: boolean;
+}
+
+export default function Projects() {
+    const projects: Project[] = [
+        {
+            title: "Journal.sol",
+            description: "A decentralized journaling application on Solana.",
+            imageUrl: "/thumbnail/journal-sol.png",
+            stack: ['Solana', 'Anchor', 'Next.js', 'Wallet Adapter', 'Tailwind'],
+            githubUrl: "https://github.com/delwinprakash/journal.sol",
+            liveUrl: "https://journal-sol-one.vercel.app",
+            isLive: true
+        },
+        {
+            title: "ChatApp",
+            description: "Real-time chat application with authentication.",
+            imageUrl: "/thumbnail/chatapp.png",
+            stack: ['React Native', 'Supabase'],
+            githubUrl: "https://github.com/delwinprakash/chatapp",
+            liveUrl: "https://drive.google.com/drive/folders/1SDkq3SCXQDbxpLhrU2QdRqZ3IKfrgzNK?usp=sharing",
+            isLive: true
+        },
+        {
+            title: "Portfolio Website",
+            description: "My personal portfolio showcasing my work.",
+            imageUrl: "/thumbnail/portfolio.png",
+            stack: ['Next.js', 'TypeScript', 'Tailwind'],
+            githubUrl: "https://github.com/delwinprakash/portfolio",
+            liveUrl: "https://delwin.vercel.app/",
+            isLive: true
+        },
+        {
+            title: "E-Cleanse",
+            description: "E-waste management platform.",
+            imageUrl: "/thumbnail/ecleanse.png",
+            stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind'],
+            githubUrl: "https://github.com/DelwinPrakash/E-Cleanse",
+            liveUrl: "",
+            isLive: false
+        },
+        {
+            title: "Todo App",
+            description: "Simple and effective task management.",
+            imageUrl: "/thumbnail/nativeTodo.png",
+            stack: ['React Native', 'Expo', 'Tailwind'],
+            githubUrl: "https://github.com/DelwinPrakash/react-native-todo",
+            liveUrl: "",
+            isLive: false
+        }
+    ];
+
+    return (
+        <div className="relative w-full min-h-screen overflow-x-hidden text-foreground selection:bg-primary/30 pt-20">
+
+            <Section className="relative z-10">
+                <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
+                    <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">My Projects</h1>
+                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                        A collection of projects I&apos;ve worked on, ranging from web applications to blockchain dApps.
+                    </p>
                 </div>
-                <div className="w-full px-3">
-                    <Footer/>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
+                    {projects.map((project, index) => (
+                        <Card key={index} className="flex flex-col h-full overflow-hidden group">
+                            <div className="relative aspect-video w-full overflow-hidden rounded-lg mb-4 bg-muted">
+                                <Image
+                                    src={project.imageUrl}
+                                    alt={project.title}
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                                    {project.isLive && (
+                                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                                            <Button size="sm" variant="secondary">Live Demo</Button>
+                                        </a>
+                                    )}
+                                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                                        <Button size="sm" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-black">GitHub</Button>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-col flex-grow">
+                                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
+                                <p className="text-muted-foreground text-sm mb-4 flex-grow">{project.description}</p>
+
+                                <div className="flex flex-wrap gap-2 mt-auto">
+                                    {project.stack.map((tech) => (
+                                        <span key={tech} className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </Card>
+                    ))}
                 </div>
-            </div>
+            </Section>
         </div>
     );
 }
