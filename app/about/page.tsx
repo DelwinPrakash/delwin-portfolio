@@ -2,6 +2,7 @@
 
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 
 export default function About() {
@@ -23,6 +24,14 @@ export default function About() {
                             <p className="text-lg leading-relaxed text-muted-foreground">
                                 Hi, I&apos;m Delwin Prakash, a 21-year-old Computer Science undergraduate passionate about creating impactful digital experiences. I specialize in web and mobile app development, blending functionality with clean design to build intuitive and responsive applications. My journey in tech has been driven by curiosity and a constant desire to learn, pushing me to explore new tools, frameworks, and technologies that solve real-world problems.
                             </p>
+                            <div className="mt-6">
+                                <a href="https://raw.githubusercontent.com/delwinprakash/resume/main/pdf/resume.pdf" download="Delwin_Prakash_Resume.pdf">
+                                    <Button variant="outline" className="gap-2 hover:bg-slate-800">
+                                        <Image src="/file.svg" alt="Resume" width={20} height={20} />
+                                        Download Resume
+                                    </Button>
+                                </a>
+                            </div>
                         </Card>
 
                         <Card className="p-8 sm:p-10">

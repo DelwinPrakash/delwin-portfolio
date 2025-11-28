@@ -19,7 +19,7 @@ export default function Footer() {
                         ))}
                     </div>
                     <p className="text-xs text-muted-foreground font-mono">
-                        &copy; {new Date().getFullYear()} Delwin Prakash. All rights reserved.
+                        &copy; {new Date().getFullYear()} Delwin Prakash
                     </p>
                 </div>
 
