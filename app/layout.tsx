@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logo/d.png" />
+        <link rel="icon" href="/logo/dp.jpg" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${spaceMono.variable} ${pixelify.variable} antialiased bg-background text-foreground selection:bg-primary/30 min-h-screen flex flex-col`}

@@ -48,16 +48,16 @@ export default function About() {
                         </div>
                         <div className="flex justify-center gap-8">
                             <a href="mailto:dev.delwin@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-                                <Image src="/logo/gmail-48.png" alt="Gmail" width={40} height={40} />
+                                <Image src="/logo/gmail.png" alt="Gmail" width={40} height={40} />
                             </a>
                             <a href="https://x.com/PrakashDelwin" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-                                <Image src="https://img.icons8.com/color/48/twitterx--v1.png" alt="X" width={40} height={40} />
+                                <Image src="/logo/x.png" alt="X" width={40} height={40} />
                             </a>
                             <a href="https://github.com/DelwinPrakash" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-                                <Image src="https://img.icons8.com/fluency/48/github.png" alt="Github" width={40} height={40} />
+                                <Image src="/logo/github.png" alt="Github" width={40} height={40} />
                             </a>
                             <a href="https://www.linkedin.com/in/DelwinPrakash" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-                                <Image src="/logo/linkedin-48.png" alt="LinkedIn" width={40} height={40} />
+                                <Image src="/logo/linkedin.png" alt="LinkedIn" width={40} height={40} />
                             </a>
                         </div>
                     </div>
