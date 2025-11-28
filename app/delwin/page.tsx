@@ -84,10 +84,18 @@ export default function DelwinLinks() {
                             strokeWidth="2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                        >
-                            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
-                            <polyline points="16 6 12 2 8 6" />
-                            <line x1="12" y1="2" x2="12" y2="15" />
+                            >
+                            <path
+                                d="M6 11C6 8.17157 6 6.75736 6.87868 5.87868C7.75736 5 9.17157 5 12 5H15C17.8284 5 19.2426 5 20.1213 5.87868C21 6.75736 21 8.17157 21 11V16C21 18.8284 21 20.2426 20.1213 21.1213C19.2426 22 17.8284 22 15 22H12C9.17157 22 7.75736 22 6.87868 21.1213C6 20.2426 6 18.8284 6 16V11Z"
+                                stroke="#ffffff"
+                                strokeWidth="1.5"
+                            />
+                            <path
+                                opacity="0.5"
+                                d="M6 19C4.34315 19 3 17.6569 3 16V10C3 6.22876 3 4.34315 4.17157 3.17157C5.34315 2 7.22876 2 11 2H15C16.6569 2 18 3.34315 18 5"
+                                stroke="#ffffff"
+                                strokeWidth="1.5"
+                            />
                         </svg>
                     )}
                 </div>
@@ -151,7 +159,7 @@ export default function DelwinLinks() {
             </div>
 
             <div
-                className={`fixed bottom-5 right-5 bg-gray-900/70 text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-300 ease-in-out flex items-center gap-2 z-50 ${showToast ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}>
+                className={`fixed top-15 right-5 bg-gray-900/90 text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-300 ease-in-out flex items-center gap-2 ${showToast ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
