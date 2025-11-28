@@ -151,7 +151,7 @@ export default function DelwinLinks() {
             </div>
 
             <div
-                className={`fixed top-5 right-5 bg-gray-900/70 text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-300 ease-in-out flex items-center gap-2 z-50 ${showToast ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}>
+                className={`fixed bottom-5 right-5 bg-gray-900/70 text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-300 ease-in-out flex items-center gap-2 z-50 ${showToast ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
