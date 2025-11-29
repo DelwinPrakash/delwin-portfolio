@@ -15,7 +15,7 @@ export default function Navbar() {
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center h-16 sm:h-20 px-4 sm:px-8">
-            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-6 py-3 flex items-center space-x-8">
+            <div className="backdrop-blur-md border border-white/10 rounded-full px-6 py-3 flex items-center space-x-8">
                 <div className="flex items-center space-x-6 sm:space-x-8 font-mono text-sm sm:text-base">
                     {navLinks.map(({ href, label }) => (
                         <Link
