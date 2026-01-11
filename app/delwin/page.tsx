@@ -49,6 +49,16 @@ export default function DelwinLinks() {
             url: "https://t.me/DelwinPrakash",
             icon: "/logo/telegram.png",
         },
+        {
+            name: "Base",
+            url: "https://base.app/profile/delwin",
+            icon: "/logo/base.png",
+        },
+        {
+            name: "MonkeyType",
+            url: "https://monkeytype.com/profile/Delwi",
+            icon: "/logo/monkeytype.svg",
+        },
     ];
 
     return (
