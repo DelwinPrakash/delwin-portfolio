@@ -46,7 +46,7 @@ export default function DelwinLinks() {
         },
         {
             name: "Telegram",
-            url: "https://t.me/DelwinPrakash",
+            url: "https://t.me/delwiiinnn",
             icon: "/logo/telegram.png",
         },
         {
