@@ -36,6 +36,15 @@ export default function Home() {
 
     const projects: Project[] = [
         {
+            title: "Tip.sol",
+            description: "Tip.sol is a decentralized platform for instantly tipping creators with fast, low-fee SOL payments on the Solana blockchain.",
+            imageUrl: "/thumbnail/tip.sol.png",
+            stack: ['React-Native', "Expo", 'Nativewind', 'Solana', "TypeScript", 'Solana Wallet Adapter'],
+            githubUrl: "https://github.com/delwinprakash/tip.sol",
+            liveUrl: "https://drive.google.com/drive/folders/1zzEA-a7uvQMQkMIfpMbOHBisFKnyKKTE?usp=drive_link",
+            isLive: true
+        },
+        {
             title: "Rusty-Type",
             description: "Terminal based typing speed test application built with Rust.",
             imageUrl: "/thumbnail/rusty-type.png",
