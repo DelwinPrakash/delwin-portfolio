@@ -31,7 +31,7 @@ export default function Projects() {
             description: "Terminal based typing speed test application built with Rust.",
             imageUrl: "/thumbnail/rusty-type.png",
             stack: ['Rust', 'cli'],
-            githubUrl: "https://github.com/delwinprakash/rusty-type.sol",
+            githubUrl: "https://github.com/delwinprakash/rusty-type",
             liveUrl: "https://crates.io/crates/rusty-type",
             isLive: true
         },

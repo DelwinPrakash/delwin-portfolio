@@ -49,7 +49,7 @@ export default function Home() {
             description: "Terminal based typing speed test application built with Rust.",
             imageUrl: "/thumbnail/rusty-type.png",
             stack: ['Rust', 'cli'],
-            githubUrl: "https://github.com/delwinprakash/rusty-type.sol",
+            githubUrl: "https://github.com/delwinprakash/rusty-type",
             liveUrl: "https://crate.io/crates/rusty-type",
             isLive: true
         },
@@ -75,6 +75,7 @@ export default function Home() {
         "Git",
         "Java",
         "JavaScript",
+        "Kotlin",
         "MongoDB",
         "NodeJS",
         "Postman",
