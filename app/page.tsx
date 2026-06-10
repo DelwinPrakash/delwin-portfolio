@@ -36,13 +36,13 @@ export default function Home() {
 
     const projects: Project[] = [
         {
-            title: "Tip.sol",
-            description: "Tip.sol is a decentralized platform for instantly tipping creators with fast, low-fee SOL payments on the Solana blockchain.",
-            imageUrl: "/thumbnail/tip.sol.png",
-            stack: ['React-Native', "Expo", 'Nativewind', 'Solana', "TypeScript", 'Solana Wallet Adapter'],
-            githubUrl: "https://github.com/delwinprakash/tip.sol",
+            title: "EXPNX",
+            description: "Expense tracker app for android with automated SMS expense logging and AI-powered spending insights using MVVM, Jetpack Compose, and Room.",
+            imageUrl: "/thumbnail/EXPNX.png",
+            stack: ['Kotlin', "Jetpack Compose", "MVVM", "Room", "Coroutines"],
+            githubUrl: "https://github.com/DelwinPrakash/EXPNX",
             liveUrl: "https://drive.google.com/drive/folders/1zzEA-a7uvQMQkMIfpMbOHBisFKnyKKTE?usp=drive_link",
-            isLive: true
+            isLive: false
         },
         {
             title: "Rusty-Type",
