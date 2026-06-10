@@ -117,6 +117,7 @@ export default function DelwinLinks() {
                         src="/logo/dp.jpg"
                         alt="Profile"
                         fill
+                        sizes="96px"
                         className="object-cover"
                     />
                 </div>
@@ -140,6 +141,7 @@ export default function DelwinLinks() {
                                     src={link.icon}
                                     alt={link.name}
                                     fill
+                                    sizes="32px"
                                     className="object-contain rounded-md"
                                 />
                             </div>
