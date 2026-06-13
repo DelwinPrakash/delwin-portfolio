@@ -23,8 +23,8 @@ export default function Projects() {
             imageUrl: "/thumbnail/EXPNX.png",
             stack: ['Kotlin', "Jetpack Compose", "MVVM", "Room", "Coroutines"],
             githubUrl: "https://github.com/DelwinPrakash/EXPNX",
-            liveUrl: "https://drive.google.com/drive/folders/1zzEA-a7uvQMQkMIfpMbOHBisFKnyKKTE?usp=drive_link",
-            isLive: false
+            liveUrl: "https://expnx.delwin.xyz/",
+            isLive: true
         },
         {
             title: "Tip.sol",
