@@ -42,8 +42,8 @@ export default function Hero() {
           {/* Navigation Links - Hidden on Mobile */}
           <nav className="hidden md:flex items-center gap-6 font-bold text-lg">
             <a href="#about" className="hover:text-neo-blue hover:underline decoration-4 underline-offset-4 transition-colors">About</a>
-            <a href="#projects" className="hover:text-neo-blue hover:underline decoration-4 underline-offset-4 transition-colors">Projects</a>
             <a href="#experience" className="hover:text-neo-blue hover:underline decoration-4 underline-offset-4 transition-colors">Experience</a>
+            <a href="#projects" className="hover:text-neo-blue hover:underline decoration-4 underline-offset-4 transition-colors">Projects</a>
             <a href="#contact" className="hover:text-neo-blue hover:underline decoration-4 underline-offset-4 transition-colors">Contact</a>
           </nav>
 
