@@ -34,7 +34,7 @@ export default function Home() {
       {/* 1. TOP HEADER / NAVIGATION */}
       <header className="w-full max-w-7xl mx-auto px-4 pt-6 z-20">
         <div className="bg-white border-4 border-black shadow-neo-md p-4 flex items-center justify-between">
-          {/* Logo */}
+
           <div className="font-syne font-black text-2xl tracking-wider px-3 py-1 bg-neo-yellow border-2 border-black rotate-[-2deg] hover:rotate-0 transition-transform duration-200 cursor-pointer">
             DP.
           </div>
@@ -69,32 +69,23 @@ export default function Home() {
 
       {/* 3. HERO CONTENT CONTAINER */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 py-8 md:py-16 flex items-center justify-center z-10">
-        
-        {/* Desktop Split Layout / Mobile Stacked */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
-          
-          {/* Left Column: Greeting, Name, Role */}
           <div className="lg:col-span-7 flex flex-col items-start text-left w-full">
-            
-            {/* Greeting Pill */}
+
             <div className="inline-flex items-center gap-2 bg-neo-coral text-white font-black text-sm uppercase px-4 py-1.5 border-3 border-black shadow-neo-sm rotate-[-2deg] mb-6 hover:rotate-0 transition-transform duration-200">
               HELLO, I'M
             </div>
 
-            {/* Name */}
             <h1 className="font-syne font-black text-4xl sm:text-6xl xl:text-7xl tracking-tight uppercase leading-[0.9] text-black mb-6 select-none">
               Delwin <br />
-              <span className="relative inline-block text-neo-blue bg-white px-4 py-2 my-2 border-4 border-black shadow-neo-md rotate-[1deg] hover:rotate-0 hover:text-neo-coral transition-all duration-300">
+              <span className="relative inline-block text-neo-blue bg-white px-4 py-2 my-2 border-4 border-black shadow-neo-md rotate-[1deg] hover:rotate-0 hover:text-red-600 transition-all duration-300">
                 Prakash
               </span>
             </h1>
 
             {/* Role Title */}
-            <div
-              className="inline-block bg-neo-yellow text-black font-syne font-black text-2xl md:text-4xl uppercase px-6 py-4 border-3 border-black shadow-neo-sm rotate-[-1deg] hover:rotate-0 transition-transform duration-200 text-left"
-            >
+            <div className="inline-block bg-neo-yellow text-black font-syne font-black text-2xl md:text-4xl uppercase px-6 py-4 border-3 border-black shadow-neo-sm rotate-[-1deg] hover:rotate-0 transition-transform duration-200 text-left">  
               <div className="relative">
-                {/* Invisible template of the longest layout to hold the width stable and prevent layout shift */}
                 <div className="invisible select-none pointer-events-none whitespace-nowrap flex flex-col items-start gap-1">
                   <span>Blockchain</span>
                   <span className="text-neo-blue">Developer</span>
@@ -123,7 +114,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
           </div>
 
           {/* Right Column: Description Notepad Card */}
@@ -139,41 +129,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-
         </div>
-
       </main>
-
-      {/* 4. INFINITE SCROLLING MARQUEE BANNER */}
-      <footer className="w-full bg-neo-yellow border-t-4 border-black py-4 overflow-hidden z-20">
-        <div className="flex whitespace-nowrap overflow-hidden">
-          <div className="animate-marquee flex gap-8 text-xl md:text-2xl font-syne font-black uppercase tracking-wider text-black select-none">
-            <span>FullStack Developer</span>
-            <span>✦</span>
-            <span>Clean Code Specialist</span>
-            <span>✦</span>
-            <span>React & Next.js Expert</span>
-            <span>✦</span>
-            <span>Blockchain Builder</span>
-            <span>✦</span>
-            <span>Scale Architect</span>
-            <span>✦</span>
-            
-            {/* Repeated for loop continuity */}
-            <span>FullStack Developer</span>
-            <span>✦</span>
-            <span>Clean Code Specialist</span>
-            <span>✦</span>
-            <span>React & Next.js Expert</span>
-            <span>✦</span>
-            <span>Blockchain Builder</span>
-            <span>✦</span>
-            <span>Scale Architect</span>
-            <span>✦</span>
-          </div>
-        </div>
-      </footer>
-
     </div>
   );
 }
