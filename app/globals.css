@@ -62,3 +62,35 @@ body {
   background-size: 24px 24px;
 }
 
+/* Custom Neo-Brutalist Line Grid (Graph Paper) Pattern */
+.bg-line-grid {
+  background-color: #FDF6E2;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Custom Neo-Brutalist Lavender Blue-Dot Pattern */
+.bg-about-pattern {
+  background-color: #F3E8FF; /* Light pastel lavender */
+  background-image: radial-gradient(#2563EB 1.8px, transparent 1.8px);
+  background-size: 28px 28px;
+}
+
+/* Tech Grid Pattern (Sky blue with blue grid lines) */
+.bg-tech-grid {
+  background-color: #E0F2FE; /* Tailwind sky-100 */
+  background-image: 
+    linear-gradient(to right, rgba(37, 99, 235, 0.12) 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.12) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+}/* Custom marquee animation left-to-right */
+.animate-marquee-reverse {
+  animation: marquee-reverse 30s linear infinite;
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
