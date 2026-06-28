@@ -26,13 +26,29 @@ export default function Contact() {
 
     setStatus("sending");
 
-    // Simulate sending progress
-    setTimeout(() => {
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message.");
+      }
+
       setStatus("success");
       setName("");
       setEmail("");
       setMessage("");
-    }, 1500);
+    } catch (error: any) {
+      setErrorMessage(error.message || "Something went wrong. Please try again.");
+      setStatus("error");
+    }
   };
 
   return (
