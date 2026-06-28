@@ -94,3 +94,29 @@ body {
   0% { transform: translateX(-50%); }
   100% { transform: translateX(0); }
 }
+
+/* Custom Neo-Brutalist Scrollbar */
+.custom-scrollbar {
+  scrollbar-width: auto;
+  scrollbar-color: #FFE600 #FDF6E2;
+}
+
+/* Chrome, Edge, and Safari */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #FDF6E2;
+  border-left: 3px solid #000000;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #FFE600;
+  border: 3px solid #000000;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #FF5C5C;
+}
+
